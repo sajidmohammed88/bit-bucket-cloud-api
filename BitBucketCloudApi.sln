@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31025.194
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{F5A8235F-0E48-41EB-A811-68DF999F6DCF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{DF204A8F-BE20-4A4D-A8B3-1D68B0D94D0A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BitBucketCloudApi.Api", "src\BitBucketCloudApi.Api\BitBucketCloudApi.Api.csproj", "{66534707-C9C4-4AE5-8380-716EE9BA12A1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BitBucketCloudApi.Domain", "src\BitBucketCloudApi.Domain\BitBucketCloudApi.Domain.csproj", "{A73F76F2-4569-416A-A50F-C6F7F33CB6F4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BitBucketCloudApi.Infrastructure", "src\BitBucketCloudApi.Infrastructure\BitBucketCloudApi.Infrastructure.csproj", "{45844BEB-C580-4F8A-ABB1-38867953DB66}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{66534707-C9C4-4AE5-8380-716EE9BA12A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66534707-C9C4-4AE5-8380-716EE9BA12A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66534707-C9C4-4AE5-8380-716EE9BA12A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66534707-C9C4-4AE5-8380-716EE9BA12A1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A73F76F2-4569-416A-A50F-C6F7F33CB6F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A73F76F2-4569-416A-A50F-C6F7F33CB6F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A73F76F2-4569-416A-A50F-C6F7F33CB6F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A73F76F2-4569-416A-A50F-C6F7F33CB6F4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{45844BEB-C580-4F8A-ABB1-38867953DB66}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45844BEB-C580-4F8A-ABB1-38867953DB66}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45844BEB-C580-4F8A-ABB1-38867953DB66}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45844BEB-C580-4F8A-ABB1-38867953DB66}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{66534707-C9C4-4AE5-8380-716EE9BA12A1} = {F5A8235F-0E48-41EB-A811-68DF999F6DCF}
+		{A73F76F2-4569-416A-A50F-C6F7F33CB6F4} = {F5A8235F-0E48-41EB-A811-68DF999F6DCF}
+		{45844BEB-C580-4F8A-ABB1-38867953DB66} = {F5A8235F-0E48-41EB-A811-68DF999F6DCF}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AECDFF74-3D8C-4762-AFD4-74EEB8C9A30E}
+	EndGlobalSection
+EndGlobal

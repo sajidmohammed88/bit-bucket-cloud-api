@@ -1,0 +1,13 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/src/BitBucketCloudApi.Infrastructure/bin/Debug/netcoreapp3.1
+/src/BitBucketCloudApi.Api/bin/Debug/netcoreapp3.1
+/src/BitBucketCloudApi.Domain/bin/Debug/netcoreapp3.1
+/src/BitBucketCloudApi.Domain/obj/Debug/netcoreapp3.1
+/src/BitBucketCloudApi.Domain/obj
+/src/BitBucketCloudApi.Infrastructure/obj
+/.vs
+/src/BitBucketCloudApi.Api/obj
+/src/BitBucketCloudApi.Api/BitBucketCloudApi.Api.csproj.user
