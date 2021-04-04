@@ -4,6 +4,10 @@ namespace BitBucketCloudApi.Domain.TokenAggregate.Abstractions
 {
     public interface ITokenHandler
     {
-        Task<AccessToken> GenerateToken();
+        /// <summary>
+        /// Get the access token.
+        /// </summary>
+        /// <returns>The access token.</returns>
+        Task<string> GetAccessToken();
     }
 }

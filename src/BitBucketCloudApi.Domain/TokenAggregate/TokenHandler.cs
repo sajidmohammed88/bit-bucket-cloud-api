@@ -8,25 +8,31 @@ namespace BitBucketCloudApi.Domain.TokenAggregate
     public class TokenHandler : ITokenHandler
     {
         private readonly IMemoryCache _cache;
-        private readonly ITokenGeneratorRespository _tokenGeneratorRespository;
+        private readonly ITokenGeneratorRepository _tokenGeneratorRepository;
+        private readonly Task<string> _generateTokenTask;
 
-        private const string _cacheKey = "_AccessToken";
-
-        public TokenHandler(IMemoryCache cache, ITokenGeneratorRespository tokenGeneratorRespository)
+        public TokenHandler(IMemoryCache cache, ITokenGeneratorRepository tokenGeneratorRepository)
         {
             _cache = cache ?? throw new ArgumentNullException(nameof(cache));
-            _tokenGeneratorRespository = tokenGeneratorRespository ?? throw new ArgumentNullException(nameof(tokenGeneratorRespository));
+            _tokenGeneratorRepository = tokenGeneratorRepository ?? throw new ArgumentNullException(nameof(tokenGeneratorRepository));
+            _generateTokenTask = GenerateTokenTask();
         }
 
-        public async Task<AccessToken> GenerateToken()
+        private async Task<string> GenerateTokenTask()
         {
-            return await _cache.GetOrCreateAsync<AccessToken>(_cacheKey, async e =>
+            return await _cache.GetOrCreateAsync("AccessToken_", async e =>
             {
-                AccessToken accessToken = await _tokenGeneratorRespository.GenerateToken().ConfigureAwait(false);
+                AccessToken accessToken = await _tokenGeneratorRepository.GenerateToken().ConfigureAwait(false);
                 e.SlidingExpiration = TimeSpan.FromSeconds(accessToken.ExpirationTime);
 
-                return accessToken;
+                return accessToken.Token;
             });
+        }
+
+        /// <inheritdoc />
+        public async Task<string> GetAccessToken()
+        {
+            return await _generateTokenTask.ConfigureAwait(false);
         }
     }
 }

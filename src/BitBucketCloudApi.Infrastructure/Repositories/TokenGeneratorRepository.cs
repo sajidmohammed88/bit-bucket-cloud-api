@@ -10,25 +10,33 @@ using System.Threading.Tasks;
 
 namespace BitBucketCloudApi.Infrastructure.Repositories
 {
-    public class TokenGeneratorRespository : ITokenGeneratorRespository
+    /// <summary>
+    /// The token generator repository class.
+    /// </summary>
+    /// <seealso cref="ITokenGeneratorRepository" />
+    public class TokenGeneratorRepository : ITokenGeneratorRepository
     {
         private readonly TokenGeneratorConfiguration _tokenGeneratorConfiguration;
 
-        private IFlurlRequest BaseRequest => _tokenGeneratorConfiguration.BaseUrl.AbsoluteUri.ConfigureRequest(setting => setting.JsonSerializer = new FlurlSerializer());
+        private IFlurlRequest BaseRequest => _tokenGeneratorConfiguration
+            .BaseUrl
+            .AbsoluteUri
+            .ConfigureRequest(setting => setting.JsonSerializer = new FlurlSerializer());
 
-        public TokenGeneratorRespository(IOptions<TokenGeneratorConfiguration> options)
+        public TokenGeneratorRepository(IOptions<TokenGeneratorConfiguration> options)
         {
-            _tokenGeneratorConfiguration = options.Value;
+            _tokenGeneratorConfiguration = options.Value ?? throw new ArgumentNullException(nameof(TokenGeneratorConfiguration));
         }
 
+        /// <inheritdoc />
         public async Task<AccessToken> GenerateToken()
         {
-            IFlurlRequest flurlRequest = BaseRequest;
-            flurlRequest
+            IFlurlRequest request = BaseRequest;
+            request
                 .Headers
                 .AddOrReplace("Authorization", $"Basic {Convert.ToBase64String(Encoding.ASCII.GetBytes($"{_tokenGeneratorConfiguration.Key}:{_tokenGeneratorConfiguration.Secret}"))}");
 
-            return await flurlRequest
+            return await request
                 .PostUrlEncodedAsync($"grant_type=password&username={_tokenGeneratorConfiguration.UserName}&password={_tokenGeneratorConfiguration.Password}")
                 .ReceiveJson<AccessToken>()
                 .ConfigureAwait(false);

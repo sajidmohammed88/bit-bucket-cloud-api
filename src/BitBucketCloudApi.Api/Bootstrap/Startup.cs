@@ -1,3 +1,4 @@
+using BitBucketCloudApi.Domain.BitBucketCloudAggregate.Abstractions;
 using BitBucketCloudApi.Domain.TokenAggregate;
 using BitBucketCloudApi.Domain.TokenAggregate.Abstractions;
 using BitBucketCloudApi.Infrastructure.Configurations;
@@ -27,8 +28,10 @@ namespace BitBucketCloudApi.Api.Bootstrap
                 .AddCheck("Default", () => HealthCheckResult.Healthy("OK"));
 
             services.Configure<TokenGeneratorConfiguration>(Configuration.GetSection(TokenGeneratorConfiguration.TokenConfiguration));
+            services.Configure<BitBucketCloudApiRepositoryConfiguration>(Configuration.GetSection(BitBucketCloudApiRepositoryConfiguration.RepositoryConfiguration));
 
-            services.AddScoped<ITokenGeneratorRespository, TokenGeneratorRespository>();
+            services.AddSingleton<ITokenGeneratorRepository, TokenGeneratorRepository>();
+            services.AddScoped<IBitBucketCloudApiRepository, BitBucketCloudApiRepository>();
             services.AddScoped<ITokenHandler, TokenHandler>();
 
             services.AddMemoryCache();
