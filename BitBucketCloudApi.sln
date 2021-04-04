@@ -7,11 +7,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{F5A8235F-0E4
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{DF204A8F-BE20-4A4D-A8B3-1D68B0D94D0A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BitBucketCloudApi.Api", "src\BitBucketCloudApi.Api\BitBucketCloudApi.Api.csproj", "{66534707-C9C4-4AE5-8380-716EE9BA12A1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BitBucketCloudApi.Api", "DddApi\src\BitBucketCloudApi.Api\BitBucketCloudApi.Api.csproj", "{66534707-C9C4-4AE5-8380-716EE9BA12A1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BitBucketCloudApi.Domain", "src\BitBucketCloudApi.Domain\BitBucketCloudApi.Domain.csproj", "{A73F76F2-4569-416A-A50F-C6F7F33CB6F4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BitBucketCloudApi.Domain", "DddApi\src\BitBucketCloudApi.Domain\BitBucketCloudApi.Domain.csproj", "{A73F76F2-4569-416A-A50F-C6F7F33CB6F4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BitBucketCloudApi.Infrastructure", "src\BitBucketCloudApi.Infrastructure\BitBucketCloudApi.Infrastructure.csproj", "{45844BEB-C580-4F8A-ABB1-38867953DB66}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BitBucketCloudApi.Infrastructure", "DddApi\src\BitBucketCloudApi.Infrastructure\BitBucketCloudApi.Infrastructure.csproj", "{45844BEB-C580-4F8A-ABB1-38867953DB66}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DddApi", "DddApi", "{E5729CA2-8AB0-41C3-9999-F0507A3763A8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -36,6 +38,8 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
+		{F5A8235F-0E48-41EB-A811-68DF999F6DCF} = {E5729CA2-8AB0-41C3-9999-F0507A3763A8}
+		{DF204A8F-BE20-4A4D-A8B3-1D68B0D94D0A} = {E5729CA2-8AB0-41C3-9999-F0507A3763A8}
 		{66534707-C9C4-4AE5-8380-716EE9BA12A1} = {F5A8235F-0E48-41EB-A811-68DF999F6DCF}
 		{A73F76F2-4569-416A-A50F-C6F7F33CB6F4} = {F5A8235F-0E48-41EB-A811-68DF999F6DCF}
 		{45844BEB-C580-4F8A-ABB1-38867953DB66} = {F5A8235F-0E48-41EB-A811-68DF999F6DCF}

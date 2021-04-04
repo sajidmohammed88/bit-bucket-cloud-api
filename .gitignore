@@ -11,3 +11,9 @@
 /.vs
 /src/BitBucketCloudApi.Api/obj
 /src/BitBucketCloudApi.Api/BitBucketCloudApi.Api.csproj.user
+/DddApi/src/BitBucketCloudApi.Api/bin/Debug/netcoreapp3.1
+/DddApi/src/BitBucketCloudApi.Api/obj
+/DddApi/src/BitBucketCloudApi.Infrastructure/obj
+/DddApi/src/BitBucketCloudApi.Infrastructure/bin/Debug/netcoreapp3.1
+/DddApi/src/BitBucketCloudApi.Domain/bin/Debug/netcoreapp3.1
+/DddApi/src/BitBucketCloudApi.Domain/obj
