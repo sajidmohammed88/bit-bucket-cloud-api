@@ -15,6 +15,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BitBucketCloudApi.Infrastru
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DddApi", "DddApi", "{E5729CA2-8AB0-41C3-9999-F0507A3763A8}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ConsoleApp", "ConsoleApp", "{5A1615B5-13CA-48D6-BD36-8A9FBFB0A80E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BitBucketCloudApiConsole", "ConsoleApp\BitBucketCloudApiConsole.csproj", "{A9710118-0FA4-40B3-BE09-E07A4663DF68}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +37,10 @@ Global
 		{45844BEB-C580-4F8A-ABB1-38867953DB66}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{45844BEB-C580-4F8A-ABB1-38867953DB66}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{45844BEB-C580-4F8A-ABB1-38867953DB66}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A9710118-0FA4-40B3-BE09-E07A4663DF68}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A9710118-0FA4-40B3-BE09-E07A4663DF68}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A9710118-0FA4-40B3-BE09-E07A4663DF68}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A9710118-0FA4-40B3-BE09-E07A4663DF68}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -43,6 +51,7 @@ Global
 		{66534707-C9C4-4AE5-8380-716EE9BA12A1} = {F5A8235F-0E48-41EB-A811-68DF999F6DCF}
 		{A73F76F2-4569-416A-A50F-C6F7F33CB6F4} = {F5A8235F-0E48-41EB-A811-68DF999F6DCF}
 		{45844BEB-C580-4F8A-ABB1-38867953DB66} = {F5A8235F-0E48-41EB-A811-68DF999F6DCF}
+		{A9710118-0FA4-40B3-BE09-E07A4663DF68} = {5A1615B5-13CA-48D6-BD36-8A9FBFB0A80E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {AECDFF74-3D8C-4762-AFD4-74EEB8C9A30E}
