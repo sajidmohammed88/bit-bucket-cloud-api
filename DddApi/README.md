@@ -1,8 +1,7 @@
 # Introduction 
 API that connect to bitbucket cloud API and get repositories details. 
-1. Get token, by Key/Secret and username/password. 
+1. Get token, by Key/Secret and username/password and put the result in cache. 
 2. Get repositories details by generated token.
 
 # Getting Started
-1.	API references : 
-https://flurl.dev/ to make http call.
+- Install https://flurl.dev/ to use flurl for http call.
